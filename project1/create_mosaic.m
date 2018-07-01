@@ -43,17 +43,17 @@ mosaic = simple_mosaic;
 % 
 % time it took (using tic-toc) for example image: Elapsed time is 0.854293 seconds.
 % uncommment the part under if you wish to use the 1. implementation:
-% 
-% for i = 1:1:H
-%     for j = 1:1:W
-%         
-%         % adjusts the mean of the element_img so that it's the same
-% 		  % as big_img(i,j) and also the range is [0,255]	
-%         element = adjust_element_mean(element_img,big_img(i,j));
-%         mosaic (((i-1)*N)+1:i*N, ((j-1)*M)+1:j*M) = element;
-%         
-%     end
-% end
+
+for i = 1:1:H
+    for j = 1:1:W
+        
+        % adjusts the mean of the element_img so that it's the same
+		  % as big_img(i,j) and also the range is [0,255]	
+        element = adjust_element_mean(element_img,big_img(i,j));
+        mosaic (((i-1)*N)+1:i*N, ((j-1)*M)+1:j*M) = element;
+        
+    end
+end
 
 % 2. IMPLEMENTATION:
 %
@@ -63,19 +63,19 @@ mosaic = simple_mosaic;
 %
 % time it took for example image: Elapsed time is 0.008391 seconds. (~100x faster)
 % uncommment the part under if you wish to use the 2. implementation:
-
-big_img = double(big_img);
-element_img = double(element_img);
-el_img_mean = mean(element_img(:));
-
- for i = 1:1:H
-    for j = 1:1:W
-        
-        diff = big_img(i,j) - el_img_mean;
-        mosaic (((i-1)*N)+1:i*N, ((j-1)*M)+1:j*M) = mosaic (((i-1)*N)+1:i*N, ((j-1)*M)+1:j*M) + diff;
-        
-    end
- end
+% 
+% big_img = double(big_img);
+% element_img = double(element_img);
+% el_img_mean = mean(element_img(:));
+% 
+%  for i = 1:1:H
+%     for j = 1:1:W
+%         
+%         diff = big_img(i,j) - el_img_mean;
+%         mosaic (((i-1)*N)+1:i*N, ((j-1)*M)+1:j*M) = mosaic (((i-1)*N)+1:i*N, ((j-1)*M)+1:j*M) + diff;
+%         
+%     end
+%  end
 
 
 end % end of create_mosaic.m

@@ -15,11 +15,11 @@ function [ mosaic ] = create_image_matrix( element_img, matrix_size )
 %
 %               element_img - 2D, grayscale image
 %
-%%%%%%%%%%%%%%%% EXAMPLE %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% EXAMPLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % element_img = imread('example.png');
 % matrix_size = [3 4];
 % mosaic = create_image_matrix(element_img, matrix_size); 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % created: 22.10.2016 (Aleksa Gordic)
 
