@@ -32,3 +32,38 @@ intermediate result:
 as the final result you get this (using the second implementation from [here](https://github.com/gordicaleksa/digital-image-processing/blob/master/project1/create_mosaic.m))
 
 ![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project1/example_output/mosaic.png)
+
+### project#2 - Spanish Castle Illusion & color systems ([code](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/))
+
+The projects contains implementations of conversion functions between sRGB and: Y'CbCr, XYZ and Lab color systems. <br />
+You can find a nice resource I found while learning about color systems [here](https://www.youtube.com/watch?v=iDsrzKDB_tA).
+
+It also contains a function **create_illusion.m** which you can use to create your own spanish-castle-like illusion (you can play with different color systems for processing).
+
+**Getting started:**
+
+* Download the project and **run the section "main initialization logic"** (original sRGB image will popup)
+* run the section **"using the create_illusion function - YCbCr color system"** for example
+* illusion images will popup and you can play with the illusion :) 
+* **change the paths in the section "main initialization logic"** to a path to your images
+* Images are **automatically saved to example_output/** directory as files gray.jpg and neg.jpg 
+
+**Results:**
+
+From the original image:
+
+![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_input/parrots.jpg)
+
+You get 2 new images that toghether form an illusion.
+
+grayscale image (Y'CbCr was used here):
+
+![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/gray.jpg)
+
+negative image:
+
+![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/neg.jpg)
+
+If you look at the center point of the negative image for about 30 seconds and then look at the grayscale it will appear to be properly colored. As soon as you turn your eyes away you will realize that the image is indeed a grayscale one. 
+
+**Attention:** Transition needs to be fast, place your negative image over your grayscale image and after 30 seconds minimize the negative image. You should see the illusion. ([images are here](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/))
