@@ -1,12 +1,18 @@
 # Digital Image Processing projects
-This is a series of faculty projects I did for my Digital Image Processing (DIP) course. <br />
+This is a series of 6 faculty projects I did for my Digital Image Processing (DIP) course. <br />
 Link to [School of Electrical Engineering](https://www.etf.bg.ac.rs/), University of Belgrade web site.
 
 ### Requirements
 To run the programs you will need:
 * MATLAB (any version should be ok)
 
-### project#1 - Mosaic ([code](https://github.com/gordicaleksa/digital-image-processing/blob/master/project1/))
+### Table of contents:
+- [project 1 - Mosaic](#toc_1)
+- [project 2 - Spanish Castle Illusion & color systems](#toc_2)
+- [project 3 - Image enhancement & implementation of CLAHE algorithm](#toc_3)
+
+### <h3 id="toc_1">Project 1 - Mosaic ([code](https://github.com/gordicaleksa/digital-image-processing/blob/master/project1/))</h3> 
+
 **Getting started:**
 
 * Download the code and **run the main.m** (2 new figures will popup and 2 new files will be saved to **example_output/**)
@@ -33,7 +39,7 @@ as the final result you get this (using the second implementation from [here](ht
 
 ![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project1/example_output/mosaic.png)
 
-### project#2 - Spanish Castle Illusion & color systems ([code](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/))
+### <h3 id="toc_2">project 2 - Spanish Castle Illusion & color systems ([code](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/))</h3>
 
 The projects contains implementations of conversion functions between sRGB and: Y'CbCr, XYZ and Lab color systems. <br />
 You can find a nice resource I found while learning about color systems [here](https://www.youtube.com/watch?v=iDsrzKDB_tA).
@@ -54,16 +60,32 @@ From the original image:
 
 ![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_input/parrots.jpg)
 
-You get 2 new images that toghether form an illusion.
+You get 2 new images that together form an illusion.
 
-grayscale image (Y'CbCr was used here):
-
-![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/gray.jpg)
-
-negative image:
-
-![alt text](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/neg.jpg)
+grayscale image (Y'CbCr was used here)         |  negative image
+:-------------------------:|:-------------------------:
+![](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/gray.jpg)  |  ![](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/neg.jpg)
 
 If you look at the center point of the negative image for about 30 seconds and then look at the grayscale it will appear to be properly colored. As soon as you turn your eyes away you will realize that the image is indeed a grayscale one. 
 
 **Attention:** Transition needs to be fast, place your negative image over your grayscale image and after 30 seconds minimize the negative image. You should see the illusion. ([images are here](https://github.com/gordicaleksa/digital-image-processing/blob/master/project2/example_output/))
+
+### <h3 id="toc_3">project 3 - Image enhancement & implementation of CLAHE algorithm ([code](https://github.com/gordicaleksa/digital-image-processing/blob/master/project3/))</h3>
+
+The project contains a series of image enhancment algorithms. Noise removal, contrast enhancment, binarization etc. <br />
+It also contains my own implementation of the CLAHE (contrast-limited adaptive histogram equalization) algorithm.
+
+**Getting started:**
+
+* Download the project and run a section and you will see a bad input image being enhanced step by step
+* Enhanced images are **automatically saved to example_output/** directory 
+
+**Examples:**
+
+Original noisy image (impulse/salt-and-pepper noise)           |  Enhanced image
+:-------------------------:|:-------------------------:
+![](https://github.com/gordicaleksa/digital-image-processing/blob/master/project3/example_input/enigma.png)  |  ![](https://github.com/gordicaleksa/digital-image-processing/blob/master/project3/example_output/enigma_out.jpg)
+
+Original image           |  Enhanced image
+:-------------------------:|:-------------------------:
+![](https://github.com/gordicaleksa/digital-image-processing/blob/master/project3/example_input/text_stripes.png)  |  ![](https://github.com/gordicaleksa/digital-image-processing/blob/master/project3/example_output/binarization.png)
