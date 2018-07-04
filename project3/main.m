@@ -297,4 +297,87 @@ figure(6); imshow(Jb);
 
 Jb = im2uint8(Jb);
 imwrite(Jb,'example_output/binarization.png');
+
+%% Problem 4 - testing the dos_clahe function
+
+clear all;
+close all;
+clc; 
+
+% read in the image
+mars = imread('example_input/mars_moon.tif');
+
+figure(99); imshow(mars);
+
+%%%%%%%%%%%%%%%%%%%%% CHANGING THE NUMBER OF TILES %%%%%%%%%%%%%%%%%%%%%%%%
+
+tic
+M1 = dos_clahe(mars,[1 1],0.08);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(1);
+imshow(M1);
+set(gcf, 'Name', 'num_tiles = [1 1]');
+
+tic
+M4 = dos_clahe(mars,[4 4],0.08);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(2);
+imshow(M4); 
+set(gcf, 'Name', 'num_tiles = [4 4]');
+
+tic
+M8 = dos_clahe(mars,[8 8],0.08);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(3);
+imshow(M8);
+set(gcf, 'Name', 'num_tiles = [8 8]');
+
+tic
+M16 = dos_clahe(mars,[16 16],0.08);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(4);
+imshow(M16);
+set(gcf, 'Name', 'num_tiles = [16 16]')
+
+%%%%%%%%%%%%%%%%%%%%% CHANGING THE CLIP LIMIT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+tic
+M0 = dos_clahe(mars,[16 16],0.01);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(5);
+imshow(M0);
+set(gcf, 'Name', 'limit = 0.01')
+
+tic
+M0 = dos_clahe(mars,[16 16],0.1);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(6);
+imshow(M0);
+set(gcf, 'Name', 'limit = 0.1')
+
+tic
+M0 = dos_clahe(mars,[16 16],1);
+t = toc;
+t_norm = t/numel(mars);
+display(t_norm);
+figure(7);
+imshow(M0);
+set(gcf, 'Name', 'limit = 1')
+
+
+
+% save the best image
+imwrite(M16,'example_output/mars_clahe_best.jpg');
         
